@@ -1,0 +1,78 @@
+{
+ "name": "corporate-website-nextjs",
+ "version": "0.1.0",
+ "private": true,
+ "main": "src/pages/index.tsx",
+ "description": "",
+ "homepage": "https://github.com/ghazaryan81/corporate-website-nextjs.git",
+ "author": "Hayk Ghazaryan <hovhannesi.hayk.ghazaryan.81@gmail.com> (https://github.com/ghazaryan81/corporate-website-nextjs.git)",
+ "keywords": [
+  "corporate-website-nextjs"
+ ],
+ "repository": {
+  "type": "git",
+  "url": "git+ssh@github.com:ghazaryan81/corporate-website-nextjs.git"
+ },
+ "bugs": {
+  "url": "https://github.com/ghazaryan81/corporate-website-nextjs/issues/",
+  "email": "hovhannesi.hayk.ghazaryan.81@gmail.com"
+ },
+ "scripts": {
+  "dev": "concurrently \"npm run killport\" \"npm run next:dev\"",
+  "next:dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "c___________________stylelint_______________________": "",
+  "stylelint": "stylelint 'src/styles/**/*{.css,.scss,.sass}'",
+  "stylelint:fix": "npm run stylelint -- --fix",
+  "c___________________prettier_______________________": "",
+  "prettier": "prettier --config \".prettierrc\" --check \"src/**/*.{js,jsx,ts,tsx,css,scss}\"",
+  "prettier:fix": "npm run prettier -- --write",
+  "c___________________json-server_______________________": "",
+  "data1": "npx json-server -w ./src/data/menu.json -p 4001",
+  "data2": "npx json-server -w ./src/data/todo.json -p 4002",
+  "killport": "kill-port --port 4001,4002,3000",
+  "prepare": "husky install"
+ },
+ "dependencies": {
+  "@types/react-router-dom": "^5.3.3",
+  "json-server": "^0.17.3",
+  "next": "13.4.9",
+  "postcss": "^8.4.25",
+  "react": "18.2.0",
+  "react-dom": "18.2.0",
+  "sass": "^1.63.6",
+  "sass-svg-uri": "^2.0.0"
+ },
+ "devDependencies": {
+  "@types/node": "20.4.1",
+  "@types/react": "18.2.14",
+  "eslint": "8.44.0",
+  "eslint-config-next": "13.4.9",
+  "husky": "^8.0.0",
+  "lint-staged": "^13.2.3",
+  "prettier": "^3.0.0",
+  "sass-lint-auto-fix": "^0.21.2",
+  "stylelint": "^15.10.1",
+  "stylelint-config-rational-order": "^0.1.2",
+  "stylelint-config-recommended-scss": "^12.0.0",
+  "stylelint-order": "^6.0.3",
+  "stylelint-prettier": "^4.0.0",
+  "stylelint-scss": "^5.0.1",
+  "typescript": "5.1.6"
+ },
+ "husky": {
+  "hooks": {
+   "pre-commit": "lint-staged"
+  }
+ },
+ "lint-staged": {
+  "src/styles/**/*.{css,scss}": [
+   "npm run stylelint:fix"
+  ],
+  "src/**/*.{js,jsx,ts,tsx,css,scss}": [
+   "npm run prettier:fix"
+  ]
+ }
+}
