@@ -57,13 +57,63 @@ function Home({ ...props }) {
 				<Header className="main-header">
 					<Section className="top-bar">
 						<Div className="container-fix">
-       <Div className="top-bar__cols">
+       <Div className="top-bar__row">
         <Div className="top-bar__col top-bar__col--1">
          <Logo ImgProps={{ src: "assets/img/logo.svg", width: "210" }} linkProps={{ href: "#" }}/>
         </Div>
         <Div className="top-bar__col top-bar__col--2">
 
+        <Div className="box box--round box--md box--flex-center box--brand-1-flat">
+         <SvgSprite width="2.7rem" iconHash="icon-time" className="sprite-icon icon-width-40"/>
+        </Div>
 
+        <Div className="box box--round box--md box--flex-center box--brand-1-flat">
+         <SvgSprite width="2.6rem" iconHash="icon-email" className="sprite-icon icon-width-40"/>
+        </Div>
+
+        <Div className="box box--round box--md box--flex-center box--brand-1-flat">
+         <SvgSprite width="2.4rem" iconHash="icon-phone" className="sprite-icon icon-width-40"/>
+        </Div>
+
+        <Div className="box box--round box--md box--flex-center box--brand-2-gradient">
+         <SvgSprite width="2.55rem" iconHash="icon-delivery-brand" className="sprite-icon icon-width-40"/>
+        </Div>
+        
+        <Div className="box box--round box--md box--flex-center box--brand-2-gradient">
+         <SvgSprite width="3.05rem" iconHash="icon-coast-brand" className="sprite-icon icon-width-50"/>
+        </Div>
+
+        <Div className="box box--round box--md box--flex-center box--brand-2-gradient">
+         <SvgSprite width="2.4rem" iconHash="icon-global-brand" className="sprite-icon icon-width-40"/>
+        </Div>
+
+        <Div className="box box--round box--md box--flex-center box--brand-2-gradient">
+         <SvgSprite width="2.6rem" iconHash="icon-time" className="sprite-icon icon-width-45"/>
+        </Div>
+
+        <Div className="box box--round box--md box--flex-center box--brand-2-gradient">
+         <SvgSprite width="2.6rem" iconHash="icon-ship-brand" className="sprite-icon icon-width-40"/>
+        </Div>
+
+        <Div className="box box--round box--md box--flex-center box--brand-2-gradient">
+         <SvgSprite width="2.6rem" iconHash="icon-support-brand" className="sprite-icon icon-width-45"/>
+        </Div>
+
+        <Div className="box box--round box--md box--flex-center box--brand-2-gradient">
+         <SvgSprite width="2.6rem" iconHash="icon-transport-brand" className="sprite-icon icon-width-45"/>
+        </Div>
+
+        <Div className="box box--round box--lg box--flex-center box--brand-2-gradient">
+         <SvgSprite width="3.15rem" iconHash="icon-quote" className="sprite-icon icon-width-45"/>
+        </Div>
+
+        <Div className="box box--round box--sm box--flex-center box--brand-2-gradient box--brand-2-gradient-hover">
+         <SvgSprite width="1.35rem" iconHash="icon-arrow-tail-prev" className="sprite-icon icon-width-35"/>
+        </Div>
+
+        <Div className="box box--round box--sm box--flex-center box--brand-2-gradient box--brand-2-gradient-hover">
+         <SvgSprite width="1.35rem" iconHash="icon-arrow-tail-next" className="sprite-icon icon-width-35"/>
+        </Div>
 
         </Div>
        </Div>

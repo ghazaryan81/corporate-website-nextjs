@@ -11,6 +11,8 @@
 
 @use "@/styles/base" as *;
 
+@use "@/styles/components/atoms/box" as *;
+
 body {
  font-family: var(--font-family-root);
  font-size: var(--fs-140);
@@ -40,11 +42,12 @@ body {
  min-height: clamp(10rem, vw(16rem), 16rem);
  background-color: var(--blue-100);
 
- &__cols {
-  text-decoration: none;
+ &__row {
   display: flex;
   justify-content: space-between;
+ }
 
+ &__col {
   &--1 {
    text-decoration: none;
   }
@@ -53,4 +56,24 @@ body {
    text-decoration: none;
   }
  }
+}
+
+.icon-width-35 {
+ width: 35%;
+ height: auto;
+}
+
+.icon-width-40 {
+ width: 40%;
+ height: auto;
+}
+
+.icon-width-45 {
+ width: 45%;
+ height: auto;
+}
+
+.icon-width-50 {
+ width: 50%;
+ height: auto;
 }

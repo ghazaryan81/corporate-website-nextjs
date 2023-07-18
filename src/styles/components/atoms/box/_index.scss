@@ -1,0 +1,111 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.box {
+ @include p;
+ overflow: hidden;
+
+ &--sm {
+  @include wh(clamp(2.3rem, vw(4.354rem), 4.354rem));
+ }
+
+ &--md {
+  @include wh(clamp(4.3rem, vw(6.3rem), 6.3rem));
+ }
+
+ &--lg {
+  @include wh(clamp(5.285rem, vw(7.285rem), 7.285rem));
+ }
+
+ &--round {
+  border-radius: 50%;
+ }
+
+ &--brand-1-flat {
+  color: var(--yellow-200);
+  border: solid var(--blue-500) 1px;
+  background-color: var(--blue-300);
+
+  .sprite-icon {
+   @include p;
+   z-index: 2;
+   transition:
+    var(--ease-100) fill var(--duration-160),
+    var(--ease-100) color var(--duration-160);
+  }
+
+  &-hover {
+   cursor: pointer;
+
+   &:after {
+    @include wh(100%);
+    @include p(abs);
+    color: var(--yellow-200);
+    z-index: 1;
+    display: block;
+    content: "";
+    opacity: 0;
+    transition:
+     var(--ease-100) opacity var(--duration-160),
+     var(--ease-100) color var(--duration-160);
+    background: var(--gradient-yellow-300);
+    will-change: fill, color;
+   }
+
+   &:hover {
+    color: var(--black-600);
+
+    &:after {
+     opacity: 1;
+    }
+   }
+  }
+ }
+
+ &--brand-2-gradient {
+  color: var(--black-600);
+  background: var(--gradient-yellow-300);
+
+  .sprite-icon {
+   @include p;
+   z-index: 2;
+   transition:
+    var(--ease-100) fill var(--duration-160),
+    var(--ease-100) color var(--duration-160);
+   will-change: fill, color;
+  }
+
+  &-hover {
+   cursor: pointer;
+
+   &:after {
+    @include wh(100%);
+    @include p(abs);
+    color: var(--yellow-200);
+    z-index: 1;
+    display: block;
+    content: "";
+    opacity: 0;
+    transition:
+     var(--ease-100) opacity var(--duration-160),
+     var(--ease-100) color var(--duration-160);
+    border: solid var(--blue-500) 1px;
+    background-color: var(--blue-300);
+    will-change: opacity, color;
+   }
+
+   &:hover {
+    color: var(--yellow-200);
+
+    &:after {
+     opacity: 1;
+    }
+   }
+  }
+ }
+
+ &--flex-center {
+  @include flex-center;
+ }
+}
